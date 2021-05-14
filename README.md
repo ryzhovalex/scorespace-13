@@ -1,2 +1,3 @@
-# scorespace-13
-Scorespace Jam #13
+# ScoreSpace Jam #13 🕹️
+## Theme: <theme>
+---
