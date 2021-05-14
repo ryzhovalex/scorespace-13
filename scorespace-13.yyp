@@ -1,6 +1,19 @@
 {
   "resources": [
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm_testenv","path":"rooms/rm_testenv/rm_testenv.yy",},"order":0,},
+    {"id":{"name":"Character","path":"objects/Character/Character.yy",},"order":1,},
+    {"id":{"name":"Ball","path":"objects/Ball/Ball.yy",},"order":2,},
+    {"id":{"name":"Court","path":"objects/Court/Court.yy",},"order":3,},
+    {"id":{"name":"Gate","path":"objects/Gate/Gate.yy",},"order":4,},
+    {"id":{"name":"GameController","path":"objects/GameController/GameController.yy",},"order":1,},
+    {"id":{"name":"game_config","path":"scripts/game_config/game_config.yy",},"order":0,},
+    {"id":{"name":"Button","path":"objects/Button/Button.yy",},"order":0,},
+    {"id":{"name":"BallSpawner","path":"objects/BallSpawner/BallSpawner.yy",},"order":5,},
+    {"id":{"name":"Wall","path":"objects/Wall/Wall.yy",},"order":6,},
+    {"id":{"name":"sp_testcharacter","path":"sprites/sp_testcharacter/sp_testcharacter.yy",},"order":0,},
+    {"id":{"name":"globals","path":"scripts/globals/globals.yy",},"order":1,},
+    {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -16,6 +29,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_testenv","path":"rooms/rm_testenv/rm_testenv.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
@@ -38,6 +52,10 @@
     {"folderPath":"folders/src/models.yy","order":1,"resourceVersion":"1.0","name":"models","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/src/controllers.yy","order":2,"resourceVersion":"1.0","name":"controllers","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/src/controllers/ui.yy","order":1,"resourceVersion":"1.0","name":"ui","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/src/config.yy","order":2,"resourceVersion":"1.0","name":"config","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/src/tests.yy","order":3,"resourceVersion":"1.0","name":"tests","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/src/tests/rooms.yy","order":1,"resourceVersion":"1.0","name":"rooms","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/src/tests/sprites.yy","order":2,"resourceVersion":"1.0","name":"sprites","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
