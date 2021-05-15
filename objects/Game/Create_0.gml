@@ -1,4 +1,5 @@
 is_paused = false
+is_paused_no_draw = false // restrict drawing pause interface during pause
 character_spawn_coord = [640, 360]
 is_spawned_player = false
 
@@ -9,7 +10,18 @@ function spawn_character() {
     }
 }
 
-function pause() {
+function defeat() {
+    show_message("easy wr")
+    game_end()
+}
+
+function pause(type) {
+    if is_undefined(type) {
+        is_paused_no_draw = false
+    } else if type == "tech" { // means technical pause by the game -- no pause' interface drawing
+        is_paused_no_draw = true
+    }
+    
     if !is_paused {
         is_paused = true
         

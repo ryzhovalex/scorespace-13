@@ -1,12 +1,12 @@
 image_speed = 0
 
 move_speed = 3
-hp = 100
+lifes = 1
 
 hit_cooldown = 5 * room_speed
-hit_force = 10
+hit_force = 0.3
 hit_radius = 180
-hit_distance = 25
+hit_distance = 250
 
 _vision_sector = 0 // =0: sector -90|90; =90: sector 0|180 ... etc.
 
@@ -59,6 +59,8 @@ function move(move_up_key, move_left_key, move_down_key, move_right_key) {
 }
 
 function hit() {
+    // sprite_index = sp_test_character_hit
+    
     for (var i = 0; i < instance_number(Ball); i++) {
         var ball = instance_find(Ball, i)
         
@@ -66,7 +68,11 @@ function hit() {
             var distance_to_ball = point_distance(x, y, ball.x, ball.y)
             var direction_to_ball = point_direction(x, y, ball.x, ball.y)
             var is_ok_distance = distance_to_ball <= hit_distance 
-            var is_ok_direction = direction_to_ball >= direction - hit_radius / 2 || direction_to_ball <= direction + hit_radius / 2  
+            var vision_sector_point_high = _vision_sector + hit_radius / 2 
+            var vision_sector_point_low = _vision_sector - hit_radius / 2
+            var is_ok_direction1 = direction_to_ball >= vision_sector_point_low
+            var is_ok_direction2 = direction_to_ball <= vision_sector_point_high
+            var is_ok_direction = is_ok_direction1 || is_ok_direction2
             
             if is_ok_distance && is_ok_direction {
                 ball.charge(hit_force, direction)
@@ -76,19 +82,19 @@ function hit() {
 }
 
 function _calculate_vision_sector() {
-    if direction >= -90 && direction < 90 {
+    if direction >= -45 && direction < 45 {
         return 0
     } 
     
-    if direction >= 0 && direction < 180 {
+    if direction >= 45 && direction < 135 {
         return 90
     }
     
-    if direction >= 90 && direction < 270 {
+    if direction >= 135 && direction < 225 {
         return 180
     }
     
-    if direction >= 180 && direction < 360 {
+    if direction >= 225 && direction < 315 {
         return 270
     }
 }
@@ -97,7 +103,17 @@ function check_ball_collision() {
     var ball = instance_place(x, y, Ball)
     
     if ball != noone {
-        
+        remove_life()      
+    }
+}
+
+function remove_life() {
+    lifes -= 1
+    
+    var game = instance_find(Game, 0)
+    
+    if lifes == 0 {
+        game.defeat() 
     }
 }
 

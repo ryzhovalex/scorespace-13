@@ -1,5 +1,5 @@
 event_inherited()
-spawn_rate_per_second = 0.2
+spawn_rate_per_second = 0.3
 
 function enable_random_spawner(ball) {
     if ball == undefined {
