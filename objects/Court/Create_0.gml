@@ -1,2 +1,2 @@
-width = 1152
-height = 592
+width = room_width - 64 * 2
+height = room_height - 64 * 2

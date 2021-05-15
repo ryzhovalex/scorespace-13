@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"sp_test_ball","path":"sprites/sp_test_ball/sp_test_ball.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
     {"id":{"name":"rm_testenv","path":"rooms/rm_testenv/rm_testenv.yy",},"order":0,},
     {"id":{"name":"Character","path":"objects/Character/Character.yy",},"order":1,},
@@ -21,9 +22,11 @@
     {"id":{"name":"BallBounceController","path":"objects/BallBounceController/BallBounceController.yy",},"order":3,},
     {"id":{"name":"BallSpawnController","path":"objects/BallSpawnController/BallSpawnController.yy",},"order":4,},
     {"id":{"name":"Spawn","path":"objects/Spawn/Spawn.yy",},"order":8,},
+    {"id":{"name":"sp_test_cannon","path":"sprites/sp_test_cannon/sp_test_cannon.yy",},"order":2,},
     {"id":{"name":"BallSpawn","path":"objects/BallSpawn/BallSpawn.yy",},"order":9,},
     {"id":{"name":"InitController","path":"objects/InitController/InitController.yy",},"order":5,},
     {"id":{"name":"TestEnvController","path":"objects/TestEnvController/TestEnvController.yy",},"order":2,},
+    {"id":{"name":"debug","path":"scripts/debug/debug.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -66,6 +69,7 @@
     {"folderPath":"folders/src/tests.yy","order":3,"resourceVersion":"1.0","name":"tests","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/src/tests/rooms.yy","order":1,"resourceVersion":"1.0","name":"rooms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/src/tests/sprites.yy","order":2,"resourceVersion":"1.0","name":"sprites","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/src/tools.yy","order":4,"resourceVersion":"1.0","name":"tools","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

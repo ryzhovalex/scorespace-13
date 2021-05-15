@@ -1,3 +1,4 @@
 /// @description spawn
-    var ball = instance_create_depth(x, y, 0, ball)
-    ball.speed = ball_speed
+    var ball_instance = instance_create_depth(x, y, 0, _final_ball_type)
+    ball_instance.speed += spawn_strength 
+    ball_instance.direction = _target_direction

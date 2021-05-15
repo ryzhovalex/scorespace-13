@@ -14,7 +14,7 @@ function move(move_up_key, move_left_key, move_down_key, move_right_key) {
     var vsp = move_y * move_speed
     
     // collisions algo from here: https://www.youtube.com/watch?v=IysShLIaosk
-    // TODO: refactor this shit
+    // TODO: refactor this shit, include setting direction up to mouse => it isn't belongs here
     if place_meeting(x+hsp, y, Wall) {
         while !place_meeting(x+sign(hsp), y, Wall) {
             x += sign(hsp)
@@ -31,6 +31,10 @@ function move(move_up_key, move_left_key, move_down_key, move_right_key) {
     
     x += hsp
     y += vsp
+    
+    // also set direction up to cursor
+    direction = point_direction(x, y, mouse_x, mouse_y)
+    // image_angle = direction
 }
 
 
