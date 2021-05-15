@@ -3,8 +3,11 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
-  "persistent": false,
-  "parentObjectId": null,
+  "persistent": true,
+  "parentObjectId": {
+    "name": "Controller",
+    "path": "objects/Controller/Controller.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

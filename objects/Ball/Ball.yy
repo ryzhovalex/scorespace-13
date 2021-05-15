@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "BuiltInSpeedUser",
+    "path": "objects/BuiltInSpeedUser/BuiltInSpeedUser.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

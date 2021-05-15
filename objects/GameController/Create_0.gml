@@ -1,9 +1,15 @@
+event_inherited()
+
 // get keybindings from config
 script_execute(game_keybindings)
 
 game = instance_create_depth(x, y, 0, Game)
 
-function _loop() {
+function loop() {
+    exit
+}
+
+function loop_pause_invincible() {
     if keyboard_check_pressed(spawn_player_key) {
         game.spawn_character()
     }
@@ -14,5 +20,9 @@ function _loop() {
     
     if keyboard_check_pressed(exit_game_key) {
         game.exit_game()
+    }
+    
+    if keyboard_check_released(pause_game_key) {
+        game.pause()
     }
 }
