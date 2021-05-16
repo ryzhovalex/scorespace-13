@@ -6,6 +6,7 @@
     {"id":{"name":"Character","path":"objects/Character/Character.yy",},"order":1,},
     {"id":{"name":"sp_test_wall","path":"sprites/sp_test_wall/sp_test_wall.yy",},"order":1,},
     {"id":{"name":"Ball","path":"objects/Ball/Ball.yy",},"order":2,},
+    {"id":{"name":"sp_test_ball_hitted","path":"sprites/sp_test_ball_hitted/sp_test_ball_hitted.yy",},"order":6,},
     {"id":{"name":"sp_test_gate","path":"sprites/sp_test_gate/sp_test_gate.yy",},"order":4,},
     {"id":{"name":"Court","path":"objects/Court/Court.yy",},"order":3,},
     {"id":{"name":"Gate","path":"objects/Gate/Gate.yy",},"order":4,},
@@ -33,6 +34,7 @@
     {"id":{"name":"Controller","path":"objects/Controller/Controller.yy",},"order":1,},
     {"id":{"name":"LoopController","path":"objects/LoopController/LoopController.yy",},"order":7,},
     {"id":{"name":"BuiltInSpeedUser","path":"objects/BuiltInSpeedUser/BuiltInSpeedUser.yy",},"order":10,},
+    {"id":{"name":"GateController","path":"objects/GateController/GateController.yy",},"order":8,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},

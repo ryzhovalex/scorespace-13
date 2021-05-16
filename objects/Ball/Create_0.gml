@@ -13,7 +13,7 @@ function add_speed(ms) {
 }
 
 function bounce(position) {
-    is_hitted = false
+    change_hitted_condition(false)
     add_speed(bounce_extra_speed)
     
     switch position {
@@ -33,17 +33,20 @@ function bounce(position) {
 }
 
 function charge(force, dir) {
-    is_hitted = true
+    change_hitted_condition(true)
     add_speed(force)
     direction = dir
 }
 
-function check_gate_collision() {
-    var gate = instance_place(x, y, Gate) 
+function change_hitted_condition(mode_enabled) {
+    if !is_undefined(mode_enabled) {
+        is_hitted = mode_enabled
+    } 
     
-    // only hitted balls can be scored
-    if is_hitted && gate != noone { 
-        instance_destroy(self)
+    if is_hitted {
+        sprite_index = sp_test_ball_hitted 
+    } else {
+        sprite_index = sp_test_ball
     }
 }
 
@@ -78,4 +81,14 @@ function check_wall_collision() {
     }
 }
 
+function score_gate() {
+    instance_destroy(self)
+} 
+
 speed += initial_speed
+
+
+
+
+
+

@@ -1,3 +1,5 @@
+draw_pie_value = 100
+
 function test_alarm() {
     /*
         Output:
@@ -15,4 +17,8 @@ function test_alarm() {
 function test_text_draw() {
     draw_set_colour(c_red)
     draw_text(500, 500, "HEY!!!!!!")
+}
+
+function test_draw_pie(value) {
+    draw_pie(500, 500, value, 100, c_red, 20, 1)
 }

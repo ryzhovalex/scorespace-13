@@ -6,13 +6,20 @@ lifes = 1
 hit_cooldown = 5 * room_speed
 hit_force = 0.3
 hit_radius = 180
-hit_distance = 250
+hit_distance = 100
+_hit_performed_recently = false 
+_hit_animation_time = 1.5 * room_speed
 
 _vision_sector = 0 // =0: sector -90|90; =90: sector 0|180 ... etc.
+
 
 function change_direction() {
     direction = point_direction(x, y, mouse_x, mouse_y) 
     _vision_sector = _calculate_vision_sector()
+    
+    if is_undefined(_vision_sector) {
+        debug(direction)
+    }
     
     switch _vision_sector {
         case 0:
@@ -59,8 +66,21 @@ function move(move_up_key, move_left_key, move_down_key, move_right_key) {
 }
 
 function hit() {
-    // sprite_index = sp_test_character_hit
-    
+    if !_hit_performed_recently {
+        _hit_performed_recently = true
+        sprite_index = sp_test_character_hit
+        alarm[0] = _hit_animation_time // enable animation
+        alarm[1] = hit_cooldown // start cooldown
+        _create_hit_draw_pie()
+        _iterate_balls_to_hit()
+    } 
+}
+
+function _create_hit_draw_pie() {
+    draw_pie(x ,y ,health, 100, c_red, 20, 1)
+}
+
+function _iterate_balls_to_hit() {
     for (var i = 0; i < instance_number(Ball); i++) {
         var ball = instance_find(Ball, i)
         
@@ -82,7 +102,7 @@ function hit() {
 }
 
 function _calculate_vision_sector() {
-    if direction >= -45 && direction < 45 {
+    if direction >= 315 || direction < 45 {
         return 0
     } 
     
@@ -116,20 +136,3 @@ function remove_life() {
         game.defeat() 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
