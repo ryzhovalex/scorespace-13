@@ -10,6 +10,10 @@ function loop() {
 }
 
 function loop_pause_invincible() {
+	if game.is_paused {
+		game.remove_builtin_pause_speed()		
+	}
+	
     if keyboard_check_pressed(spawn_player_key) {
         game.spawn_character()
     }

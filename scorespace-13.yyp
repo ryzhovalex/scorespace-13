@@ -22,6 +22,7 @@
     {"id":{"name":"sn_footstep_4","path":"sounds/sn_footstep_4/sn_footstep_4.yy",},"order":4,},
     {"id":{"name":"sn_swing_1","path":"sounds/sn_swing_1/sn_swing_1.yy",},"order":1,},
     {"id":{"name":"sp_bckg_main","path":"sprites/sp_bckg_main/sp_bckg_main.yy",},"order":2,},
+    {"id":{"name":"sp_test_dot","path":"sprites/sp_test_dot/sp_test_dot.yy",},"order":7,},
     {"id":{"name":"Button","path":"objects/Button/Button.yy",},"order":0,},
     {"id":{"name":"BallSpawnPoint","path":"objects/BallSpawnPoint/BallSpawnPoint.yy",},"order":5,},
     {"id":{"name":"Wall","path":"objects/Wall/Wall.yy",},"order":6,},
@@ -78,6 +79,8 @@
     {"id":{"name":"sn_dash","path":"sounds/sn_dash/sn_dash.yy",},"order":7,},
     {"id":{"name":"sn_bounce_4","path":"sounds/sn_bounce_4/sn_bounce_4.yy",},"order":4,},
     {"id":{"name":"GateController","path":"objects/GateController/GateController.yy",},"order":8,},
+    {"id":{"name":"HitDrawPie","path":"objects/HitDrawPie/HitDrawPie.yy",},"order":11,},
+    {"id":{"name":"HitDrawPieController","path":"objects/HitDrawPieController/HitDrawPieController.yy",},"order":9,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},

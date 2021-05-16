@@ -81,9 +81,15 @@ function check_wall_collision() {
     }
 }
 
-function score_gate() {
-    instance_destroy(self)
-} 
+function check_gate_collision() {
+    var sp_width_divided = floor(sprite_width / 2)
+    var gate0 = instance_find(Gate, 0)
+    
+    // left
+    if x - sp_width_divided - 1 <= gate0.line_x0 && is_hitted {
+        gate0.catch_ball(self)   
+    }
+}
 
 speed += initial_speed
 

@@ -25,15 +25,6 @@ function pause(type) {
     if !is_paused {
         is_paused = true
         
-        for (var i = 0; i < instance_number(BuiltInSpeedUser); i++) {
-            var instance = instance_find(BuiltInSpeedUser, i)
-            debug(instance)
-            
-            if instance != noone {
-                instance.speed_backup = instance.speed
-                instance.speed = 0
-            }
-        }
     } else {
         is_paused = false
         
@@ -42,6 +33,19 @@ function pause(type) {
             
             if instance != noone {
                 instance.speed = instance.speed_backup
+            }
+        }
+    }
+}
+
+function remove_builtin_pause_speed() {
+    for (var i = 0; i < instance_number(BuiltInSpeedUser); i++) {
+        var instance = instance_find(BuiltInSpeedUser, i)
+        
+        if instance != noone {
+            if instance.speed != 0 {
+                instance.speed_backup = instance.speed
+                instance.speed = 0
             }
         }
     }
