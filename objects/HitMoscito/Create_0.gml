@@ -2,6 +2,7 @@ owner = noone
 live_time = noone
 hitted_balls = []
 
+_pause_waited = false
 _alarm0_lock = false
 
 function period() {
@@ -35,4 +36,14 @@ function _is_ball_already_hitted(ball) {
     }
     
     return false
+}
+
+function _destroy_self() {
+    var game = instance_find(Game, 0)
+    
+    if !game.is_paused {
+        instance_destroy(self)
+    } else {
+        _pause_waited = true
+    }
 }

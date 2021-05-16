@@ -1,3 +1,4 @@
+ended_by_defeat = false
 is_paused = false
 is_paused_no_draw = false // restrict drawing pause interface during pause
 character_spawn_coord = [640, 360]
@@ -11,8 +12,9 @@ function spawn_character() {
 }
 
 function defeat() {
-    show_message("easy wr")
-    game_end()
+    ended_by_defeat = true
+    pause("tech")
+    instance_destroy(instance_find(Character, 0))
 }
 
 function pause(type) {
@@ -36,6 +38,10 @@ function pause(type) {
             }
         }
     }
+}
+
+function restart() {
+    game_restart()
 }
 
 function remove_builtin_pause_speed() {

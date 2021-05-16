@@ -17,15 +17,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"ScoreController","path":"objects/ScoreController/ScoreController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"ScoreController","path":"objects/ScoreController/ScoreController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ui",
-    "path": "folders/src/ui.yy",
+    "name": "controllers",
+    "path": "folders/src/controllers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Button",
+  "name": "ScoreController",
   "tags": [],
   "resourceType": "GMObject",
 }
