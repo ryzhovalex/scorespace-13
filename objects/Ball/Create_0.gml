@@ -1,8 +1,20 @@
 event_inherited()
-initial_speed = 0.5
-bounce_extra_speed = 0.1 // how much speed ball will gain after bouncing of a wall
+initial_speed = 2
+bounce_extra_speed = 1 // how much speed ball will gain after bouncing of a wall
 max_speed = 10 
+prize_points = 150
 is_hitted = false // true if hitted by character, sets to false if ball reaches wall instead of gate
+rotate_dir = choose(1, -1)
+rotate_spd_modifier = 3
+part_type = global.part_upscore_200
+
+function create_particles() {
+	part_particles_create(global.part_system_ball, x, y, global.part_trail, 1)	
+}
+
+function rotate() {
+	image_angle += rotate_dir * rotate_spd_modifier * speed
+}
 
 function add_speed(ms) {
     if speed + ms > max_speed {
@@ -36,6 +48,11 @@ function charge(force, dir) {
     change_hitted_condition(true)
     add_speed(force)
     direction = dir
+	
+	part_particles_create(global.part_system_ball, x, y, global.part_hitwave, 1)
+	
+	var _sounds = [sn_hit_ball_0, sn_hit_ball_1, sn_hit_ball_2, sn_hit_ball_3, sn_hit_ball_4, sn_hit_ball_5, sn_hit_ball_6]
+	audio_play_sound(_sounds[irandom(array_length(_sounds)-1)], 1, false)
 }
 
 function change_hitted_condition(mode_enabled) {
@@ -44,9 +61,9 @@ function change_hitted_condition(mode_enabled) {
     } 
     
     if is_hitted {
-        sprite_index = sp_test_ball_hitted 
+        // sprite_index = sp_test_ball_hitted 
     } else {
-        sprite_index = sp_test_ball
+        // sprite_index = sp_ball_48
     }
 }
 
@@ -88,7 +105,9 @@ function check_gate_collision() {
     
     // left
     if x - sp_width_divided - 1 <= gate0.line_x0 && y_is_in_range && is_hitted {
-        gate0.catch_ball(self)   
+        gate0.catch_ball(self)
+		part_particles_create(global.part_system_ball, x, y, part_type, 1)
+		audio_play_sound(sn_goal, 1, false)
     }
 }
 

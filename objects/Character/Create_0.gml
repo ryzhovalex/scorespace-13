@@ -3,11 +3,11 @@ image_speed = 0
 move_speed = 3
 lifes = 1
 
-hit_cooldown = 2 * room_speed
-hit_force = 0.3
-hit_distance = 80
+hit_cooldown = 1 * room_speed
+hit_force = 3
+hit_distance = 40
 _hit_performed_recently = false 
-_hit_animation_time = 1 * room_speed
+_hit_animation_time = 0.15 * room_speed
 
 _vision_sector = 0 // =0: sector -90|90; =90: sector 0|180 ... etc.
 
@@ -63,7 +63,7 @@ function move(move_up_key, move_left_key, move_down_key, move_right_key) {
 function hit() {
     if !_hit_performed_recently {
         _hit_performed_recently = true
-        sprite_index = sp_test_character_hit
+        // sprite_index = sp_test_character_hit
         
         var xx_moscito = x + lengthdir_x(hit_distance, direction)
         var yy_moscito = y + lengthdir_y(hit_distance, direction)
@@ -76,6 +76,9 @@ function hit() {
         alarm[0] = _hit_animation_time // enable animation
         alarm[1] = hit_cooldown // start cooldown
         _enable_hit_draw_pie() 
+		
+		var _sounds = [sn_swing_0, sn_swing_1, sn_swing_2, sn_swing_3]
+		audio_play_sound(_sounds[irandom(array_length(_sounds)-1)], 1, false)
     } 
 }
 
@@ -118,4 +121,6 @@ function remove_life() {
     if lifes == 0 {
         game.defeat() 
     }
+	
+	audio_play_sound(sn_hurt, 1, false)
 }

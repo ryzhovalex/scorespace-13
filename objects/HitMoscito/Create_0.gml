@@ -1,5 +1,5 @@
 owner = noone
-live_time = noone
+live_time = noone	//_hit_animation_time from character in hit()
 hitted_balls = []
 
 _pause_waited = false

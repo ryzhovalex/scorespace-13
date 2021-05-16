@@ -7,6 +7,8 @@ function loop() {
         if ball != noone {
             ball.check_gate_collision()
             ball.check_wall_collision()
+			ball.rotate()
+			ball.create_particles()
         }
     }        
 }

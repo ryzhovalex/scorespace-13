@@ -17,8 +17,11 @@ function enable_mode_final_score(survival_score, goals_score, total_score, best_
     _best_score = best_score
 }
 
+// SEMEN TYPE HERE >>>>
 function _draw_final_score() {
     // draw events according to x0 and y0 interface coords
     draw_set_color(c_red)
     draw_text(_x0_interface_final_score, _y0_interface_final_score, string(_best_score))
-}
+	draw_text(_x0_interface_final_score, _y0_interface_final_score +64, string(_goals_score))
+} 
+// <<<<

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_test_cannon",
-    "path": "sprites/sp_test_cannon/sp_test_cannon.yy",
+    "name": "sp_cannon",
+    "path": "sprites/sp_cannon/sp_cannon.yy",
   },
   "solid": false,
   "visible": true,

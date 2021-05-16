@@ -3,7 +3,6 @@ survival_score = 0
 goals_score = 0
 best_score = 0
 
-_goal_prize_points = 100
 _survival_prize_points = 50 // how many points will be given for the period of time
 _survival_prize_period_seconds = 1 * room_speed // how frequently survival prize will be added to score
 
@@ -20,8 +19,8 @@ function period() {
     calculate_total_score()
 }
 
-function goal() {
-    goals_score += _goal_prize_points 
+function goal(prize_points) {
+    goals_score += prize_points 
 }
 
 function calculate_total_score() {

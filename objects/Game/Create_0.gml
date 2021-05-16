@@ -14,7 +14,7 @@ function spawn_character() {
 function defeat() {
     ended_by_defeat = true
     pause("tech")
-    instance_destroy(instance_find(Character, 0))
+    // instance_destroy(instance_find(Character, 0))
 }
 
 function pause(type) {

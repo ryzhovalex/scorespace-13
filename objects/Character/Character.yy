@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_test_character",
-    "path": "sprites/sp_test_character/sp_test_character.yy",
+    "name": "sp_character_stay",
+    "path": "sprites/sp_character_stay/sp_character_stay.yy",
   },
   "solid": false,
   "visible": true,

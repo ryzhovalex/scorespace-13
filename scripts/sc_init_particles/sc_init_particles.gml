@@ -3,6 +3,8 @@
 /*
 Чтобы создать частицы: part_particles_create(<система>, x, y, <тип частиц>, <кол-во частиц>)
 В объекте, который создает частицы, нужно прописать в событии Clean Up: part_system_destroy(<система>)
+
+part_particles_create(global.part_system_ball, x, y, global.part_hitwave, 1)
 */
 
 // Системы
@@ -22,7 +24,7 @@ var _p = part_type_create()
 part_type_shape(_p, pt_shape_disk)
 part_type_life(_p, 12, 12)
 part_type_alpha2(_p, .15, 0)
-part_type_size(_p, 1, 1, -0.05, 0)
+part_type_size(_p, .85, .85, -0.05, 0)
 
 // Передаем новый тип
 global.part_trail = _p
@@ -38,7 +40,7 @@ var _p1 = part_type_create()
 part_type_shape(_p1, pt_shape_spark)
 part_type_life(_p1, 10, 10)
 part_type_alpha2(_p1, 1, 0)
-part_type_size(_p1, 0.5, 1.2, 0.25, 0)
+part_type_size(_p1, 1, 2, 0.25, 0)
 
 // Передаем новый тип
 global.part_hitwave = _p1
@@ -73,7 +75,7 @@ part_type_alpha2(_p3, 1, 0)
 part_type_gravity(_p3, .2+choose(0, .1, .05, -.1), 90)
 
 // Передаем новый тип
-global.part_upscore_150 = _p3
+global.part_upscore_200 = _p3
 
 #endregion
 
@@ -89,6 +91,6 @@ part_type_alpha2(_p4, 1, 0)
 part_type_gravity(_p4, .2+choose(0, .1, .05, -.1), 90)
 
 // Передаем новый тип
-global.part_upscore_150 = _p4
+global.part_upscore_350 = _p4
 
 #endregion
