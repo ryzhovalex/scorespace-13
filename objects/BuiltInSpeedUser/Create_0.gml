@@ -1,0 +1,1 @@
+speed_backup = speed // save of speed value for pause purposes
