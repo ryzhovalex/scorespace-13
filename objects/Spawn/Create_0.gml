@@ -1,0 +1,1 @@
+spawn_rate_per_second = 0 // how many entities will be spawned in one second  
