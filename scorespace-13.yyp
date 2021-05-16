@@ -11,6 +11,7 @@
     {"id":{"name":"Court","path":"objects/Court/Court.yy",},"order":3,},
     {"id":{"name":"Gate","path":"objects/Gate/Gate.yy",},"order":4,},
     {"id":{"name":"game_config","path":"scripts/game_config/game_config.yy",},"order":0,},
+    {"id":{"name":"sp_test_dot","path":"sprites/sp_test_dot/sp_test_dot.yy",},"order":7,},
     {"id":{"name":"Button","path":"objects/Button/Button.yy",},"order":0,},
     {"id":{"name":"BallSpawnPoint","path":"objects/BallSpawnPoint/BallSpawnPoint.yy",},"order":5,},
     {"id":{"name":"Wall","path":"objects/Wall/Wall.yy",},"order":6,},

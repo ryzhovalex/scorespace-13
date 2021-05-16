@@ -5,6 +5,7 @@ function loop() {
         var ball = instance_find(Ball, i)
         
         if ball != noone {
+            ball.check_gate_collision()
             ball.check_wall_collision()
         }
     }        
