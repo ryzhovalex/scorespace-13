@@ -1,2 +1,2 @@
 /// @description live end
-instance_destroy(self)
+_destroy_self()
