@@ -43,6 +43,7 @@
     {"id":{"name":"sn_cannon_3","path":"sounds/sn_cannon_3/sn_cannon_3.yy",},"order":3,},
     {"id":{"name":"Game","path":"objects/Game/Game.yy",},"order":7,},
     {"id":{"name":"GameController","path":"objects/GameController/GameController.yy",},"order":2,},
+    {"id":{"name":"sp_hit","path":"sprites/sp_hit/sp_hit.yy",},"order":8,},
     {"id":{"name":"CharacterController","path":"objects/CharacterController/CharacterController.yy",},"order":3,},
     {"id":{"name":"game_keybindings","path":"scripts/game_keybindings/game_keybindings.yy",},"order":2,},
     {"id":{"name":"sn_cannon_1","path":"sounds/sn_cannon_1/sn_cannon_1.yy",},"order":1,},
@@ -81,6 +82,8 @@
     {"id":{"name":"GateController","path":"objects/GateController/GateController.yy",},"order":8,},
     {"id":{"name":"HitDrawPie","path":"objects/HitDrawPie/HitDrawPie.yy",},"order":11,},
     {"id":{"name":"HitDrawPieController","path":"objects/HitDrawPieController/HitDrawPieController.yy",},"order":9,},
+    {"id":{"name":"HitMoscito","path":"objects/HitMoscito/HitMoscito.yy",},"order":12,},
+    {"id":{"name":"HitMoscitoController","path":"objects/HitMoscitoController/HitMoscitoController.yy",},"order":10,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},

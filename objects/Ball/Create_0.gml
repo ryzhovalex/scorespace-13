@@ -84,9 +84,10 @@ function check_wall_collision() {
 function check_gate_collision() {
     var sp_width_divided = floor(sprite_width / 2)
     var gate0 = instance_find(Gate, 0)
+    var y_is_in_range = y >= gate0.line_y0 && y <= gate0.line_y1
     
     // left
-    if x - sp_width_divided - 1 <= gate0.line_x0 && is_hitted {
+    if x - sp_width_divided - 1 <= gate0.line_x0 && y_is_in_range && is_hitted {
         gate0.catch_ball(self)   
     }
 }
