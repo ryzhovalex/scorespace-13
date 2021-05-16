@@ -17,15 +17,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"Score","path":"objects/Score/Score.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"parent":{"name":"Score","path":"objects/Score/Score.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ui",
-    "path": "folders/src/ui.yy",
+    "name": "models",
+    "path": "folders/src/models.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Button",
+  "name": "Score",
   "tags": [],
   "resourceType": "GMObject",
 }

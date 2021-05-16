@@ -5,8 +5,7 @@ lifes = 1
 
 hit_cooldown = 2 * room_speed
 hit_force = 0.3
-hit_radius = 180
-hit_distance = 100
+hit_distance = 80
 _hit_performed_recently = false 
 _hit_animation_time = 1 * room_speed
 
@@ -65,44 +64,24 @@ function hit() {
     if !_hit_performed_recently {
         _hit_performed_recently = true
         sprite_index = sp_test_character_hit
+        
+        var xx_moscito = x + lengthdir_x(hit_distance, direction)
+        var yy_moscito = y + lengthdir_y(hit_distance, direction)
+        var moscito = instance_create_depth(xx_moscito, yy_moscito, 0, HitMoscito)
+        moscito.owner = self
+        moscito.live_time = _hit_animation_time
+        moscito.direction = direction
+        moscito.image_angle = direction
+        
         alarm[0] = _hit_animation_time // enable animation
         alarm[1] = hit_cooldown // start cooldown
         _enable_hit_draw_pie() 
-        _iterate_balls_to_hit()
     } 
 }
 
 function _enable_hit_draw_pie() {
     var pie = instance_create_depth(x, y, 0, HitDrawPie)
     pie.pinned_character = self
-}
-
-
-function _iterate_balls_to_hit() {
-    for (var i = 0; i < instance_number(Ball); i++) {
-        var ball = instance_find(Ball, i)
-        
-        if ball != noone {
-            var distance_to_ball = point_distance(x, y, ball.x, ball.y)
-            var direction_to_ball = point_direction(x, y, ball.x, ball.y)
-            var is_ok_distance = distance_to_ball <= hit_distance 
-            
-            var vision_sector_point_high = _vision_sector + hit_radius / 2 
-            var vision_sector_point_low = _vision_sector - hit_radius / 2
-            var is_ok_direction1 = direction_to_ball >= vision_sector_point_low
-            var is_ok_direction2 = direction_to_ball <= vision_sector_point_high
-            var is_ok_direction = is_ok_direction1 && is_ok_direction2
-            
-            if is_ok_distance && is_ok_direction {
-                // debug(">>> BALL HITTED")
-                // debug(">>> DIRECTION TO BALL: " + string(direction_to_ball))
-                // debug(">>> VISION SECTOR: " + string(_vision_sector))
-                // debug(">>> VISION SECTOR POINT LOW: " + string(vision_sector_point_low))
-                // debug(">>> VISION SECTOR POINT HIGH: " + string(vision_sector_point_high))
-                ball.charge(hit_force, direction)
-            }        
-        }
-    }
 }
 
 function _calculate_vision_sector() {

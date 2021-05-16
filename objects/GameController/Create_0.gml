@@ -18,6 +18,10 @@ function loop_pause_invincible() {
         game.spawn_character()
     }
     
+    if keyboard_check_pressed(restart_key) && game.ended_by_defeat {
+    	game.restart()
+    }
+    
     if keyboard_check_pressed(change_screen_mode_key) {
         game.change_screen_mode()
     }

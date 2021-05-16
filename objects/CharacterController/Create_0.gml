@@ -13,7 +13,7 @@ function loop() {
         _character.change_direction()
         _character.move(move_up_key, move_left_key, move_down_key, move_right_key)
         
-        if keyboard_check_released(hit_key) {
+        if mouse_check_button_released(hit_key) {
             _character.hit()
         }
     } else {
