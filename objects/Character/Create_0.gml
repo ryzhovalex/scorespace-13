@@ -10,18 +10,6 @@ hit_distance = 100
 _hit_performed_recently = false 
 _hit_animation_time = 1 * room_speed
 
-_draw_pie_enabled = false
-_draw_pie_x = x + 50
-_draw_pie_y = y - 50
-_draw_pie_value = 0
-_draw_pie_max_value = 100
-_draw_pie_color_high = c_red
-_draw_pie_color_middle = c_orange
-_draw_pie_color_low = c_green
-_draw_pie_current_color = c_red
-_draw_pie_radius = 20
-_draw_pie_transparency = 1
-
 _vision_sector = 0 // =0: sector -90|90; =90: sector 0|180 ... etc.
 
 
@@ -79,21 +67,16 @@ function hit() {
         sprite_index = sp_test_character_hit
         alarm[0] = _hit_animation_time // enable animation
         alarm[1] = hit_cooldown // start cooldown
-        _create_hit_draw_pie() 
+        _enable_hit_draw_pie() 
         _iterate_balls_to_hit()
     } 
 }
 
-function _create_hit_draw_pie() {
-    _draw_pie_enabled = true
-    var cooldown_stopwatch = hit_cooldown
-    var pie_max = 100
-    var tick_time = hit_cooldown / pie_max
-    
-    while cooldown_stopwatch > 0 {
-        draw_pie(_draw_pie_x, _draw_pie_y, _draw_pie_value, _draw_pie_max_value, _draw_pie_current_color, _draw_pie_radius, _draw_pie_transparency)
-    }
+function _enable_hit_draw_pie() {
+    var pie = instance_create_depth(x, y, 0, HitDrawPie)
+    pie.pinned_character = self
 }
+
 
 function _iterate_balls_to_hit() {
     for (var i = 0; i < instance_number(Ball); i++) {
