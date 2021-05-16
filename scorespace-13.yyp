@@ -12,6 +12,7 @@
     {"id":{"name":"Character","path":"objects/Character/Character.yy",},"order":1,},
     {"id":{"name":"sp_test_wall","path":"sprites/sp_test_wall/sp_test_wall.yy",},"order":1,},
     {"id":{"name":"sp_cannon","path":"sprites/sp_cannon/sp_cannon.yy",},"order":3,},
+    {"id":{"name":"font_komika","path":"fonts/font_komika/font_komika.yy",},"order":0,},
     {"id":{"name":"Ball","path":"objects/Ball/Ball.yy",},"order":2,},
     {"id":{"name":"sp_test_ball_hitted","path":"sprites/sp_test_ball_hitted/sp_test_ball_hitted.yy",},"order":6,},
     {"id":{"name":"sn_footstep_1","path":"sounds/sn_footstep_1/sn_footstep_1.yy",},"order":1,},
@@ -20,6 +21,7 @@
     {"id":{"name":"Gate","path":"objects/Gate/Gate.yy",},"order":4,},
     {"id":{"name":"game_config","path":"scripts/game_config/game_config.yy",},"order":0,},
     {"id":{"name":"sn_footstep_4","path":"sounds/sn_footstep_4/sn_footstep_4.yy",},"order":4,},
+    {"id":{"name":"sc_draw_text_outline","path":"scripts/sc_draw_text_outline/sc_draw_text_outline.yy",},"order":1,},
     {"id":{"name":"sn_swing_1","path":"sounds/sn_swing_1/sn_swing_1.yy",},"order":1,},
     {"id":{"name":"sp_bckg_main","path":"sprites/sp_bckg_main/sp_bckg_main.yy",},"order":2,},
     {"id":{"name":"sp_test_dot","path":"sprites/sp_test_dot/sp_test_dot.yy",},"order":7,},
@@ -132,6 +134,7 @@
     {"folderPath":"folders/SFX/sn_hit_ball.yy","order":4,"resourceVersion":"1.0","name":"sn_hit_ball","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/SFX/sn_swing.yy","order":5,"resourceVersion":"1.0","name":"sn_swing","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts.yy","order":18,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Fonts.yy","order":19,"resourceVersion":"1.0","name":"Fonts","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
