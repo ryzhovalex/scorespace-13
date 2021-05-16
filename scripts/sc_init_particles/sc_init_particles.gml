@@ -54,7 +54,7 @@ var _p2 = part_type_create()
 part_type_sprite(_p2, sp_upscore_150, 0, 0, 0)
 part_type_life(_p2, 35, 35)
 part_type_alpha2(_p2, 1, 0)
-part_type_gravity(_p2, .2, 90)
+part_type_gravity(_p2, .2+choose(0, .1, .05, -.1), 90)
 
 // Передаем новый тип
 global.part_upscore_150 = _p2
@@ -70,7 +70,7 @@ var _p3 = part_type_create()
 part_type_sprite(_p3, sp_upscore_200, 0, 0, 0)
 part_type_life(_p3, 35, 35)
 part_type_alpha2(_p3, 1, 0)
-part_type_gravity(_p3, .2, 90)
+part_type_gravity(_p3, .2+choose(0, .1, .05, -.1), 90)
 
 // Передаем новый тип
 global.part_upscore_150 = _p3
@@ -86,7 +86,7 @@ var _p4 = part_type_create()
 part_type_sprite(_p4, sp_upscore_350, 0, 0, 0)
 part_type_life(_p4, 35, 35)
 part_type_alpha2(_p4, 1, 0)
-part_type_gravity(_p4, .2, 90)
+part_type_gravity(_p4, .2+choose(0, .1, .05, -.1), 90)
 
 // Передаем новый тип
 global.part_upscore_150 = _p4
