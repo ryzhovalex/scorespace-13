@@ -1,10 +1,10 @@
 image_speed = 0
 
-move_speed = 3
+move_speed = 3.3
 lifes = 1
 
 hit_cooldown = 1 * room_speed
-hit_force = 2.5
+hit_force = 3.2
 hit_distance = 40
 
 // Animation

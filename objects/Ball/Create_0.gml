@@ -3,6 +3,7 @@ initial_speed = 2
 bounce_extra_speed = 1 // how much speed ball will gain after bouncing of a wall
 max_speed = 10 
 prize_points = 150
+hitprize_points = 30
 is_hitted = false // true if hitted by character, sets to false if ball reaches wall instead of gate
 
 // Visual effects
@@ -14,6 +15,7 @@ part_type_score = global.part_upscore_200
 part_type_trail = global.part_trail_medium
 part_normal_trail = global.part_trail_medium
 part_hit_trail = global.part_hittrail_medium
+part_hitscore = global.part_upscore_30
 
 function create_particles() {
 	part_particles_create(global.part_system_ball, x, y, part_type_trail, 1)	
@@ -49,6 +51,9 @@ function bounce(position) {
             direction = 180 - direction        
             break
     }
+	
+	//if global.sfx
+		//audio_play_sound(choose(sn_bounce_0, sn_bounce_1, sn_bounce_2, sn_bounce_3, sn_bounce_4, sn_bounce_5, sn_bounce_6), 1, false)
 }
 
 function charge(force, dir) {
@@ -57,6 +62,9 @@ function charge(force, dir) {
     direction = dir
 	
 	part_particles_create(global.part_system_ball, x, y, global.part_hitwave, 1)
+	part_particles_create(global.part_system_ball, x, y, part_hitscore, 1)	
+	
+	Score.survival_score += hitprize_points
 	
 	var _sounds = [sn_hit_ball_0, sn_hit_ball_1, sn_hit_ball_2, sn_hit_ball_3, sn_hit_ball_4, sn_hit_ball_5, sn_hit_ball_6]
 	

@@ -1,5 +1,7 @@
 event_inherited()
 spawn_rate_per_second = 0.45
+time_increase = room_speed * 10
+alarm[0] = time_increase	// every time spawn rate increase
 
 function enable_random_spawner(ball) {
     if ball == undefined {

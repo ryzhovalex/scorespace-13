@@ -28,8 +28,10 @@ function _draw_final_score() {
 		"Survival time: " +string(_survival_score) + "\n"
 		+ "Balls scored: " +string(_goals_score) + "\n"
 		+ "Total score: " +string(_total_score) + "\n\n"
-		+ "Best score: " +string(_best_score) +"\n\n"
-		+ "Press R to restart",
+		+ "Best score: " +string(_best_score) +"\n\n",
+		//+ "Press R to restart",
 		74, 1200)
+		
+	draw_text_outline(_x0_interface_final_score, 520, c_yellow, c_black, "Press R to restart", 74, 1200)
 } 
 // <<<<

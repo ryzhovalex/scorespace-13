@@ -7,7 +7,5 @@ else
 	image_index = 1
 	
 	
-if global.music && global.music_repeator {
+if global.music
 	audio_play_sound(music_stickball_theme, 1, true)
-	global.music_repeator = 0
-}

@@ -180,3 +180,51 @@ part_type_gravity(_p4, .2+choose(0, .1, .05, -.1), 90)
 global.part_upscore_350 = _p4
 
 #endregion
+
+#region Upscore 15
+// Для эффекта получения очков
+
+var _pt0 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_sprite(_pt0, sp_upscore_15, 0, 0, 0)
+part_type_life(_pt0, 25, 25)
+part_type_alpha2(_pt0, 1, 0)
+part_type_gravity(_pt0, .2+choose(0, .1, .05, -.1), 90)
+
+// Передаем новый тип
+global.part_upscore_15 = _pt0
+
+#endregion
+
+#region Upscore 30
+// Для эффекта получения очков
+
+var _pt1 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_sprite(_pt1, sp_upscore_30, 0, 0, 0)
+part_type_life(_pt1, 25, 25)
+part_type_alpha2(_pt1, 1, 0)
+part_type_gravity(_pt1, .2+choose(0, .1, .05, -.1), 90)
+
+// Передаем новый тип
+global.part_upscore_30 = _pt1
+
+#endregion
+
+#region Upscore 50
+// Для эффекта получения очков
+
+var _pt2 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_sprite(_pt2, sp_upscore_50, 0, 0, 0)
+part_type_life(_pt2, 25, 25)
+part_type_alpha2(_pt2, 1, 0)
+part_type_gravity(_pt2, .2+choose(0, .1, .05, -.1), 90)
+
+// Передаем новый тип
+global.part_upscore_50 = _pt2
+
+#endregion
