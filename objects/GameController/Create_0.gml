@@ -30,7 +30,7 @@ function loop_pause_invincible() {
         game.exit_game()
     }
     
-    if keyboard_check_released(pause_game_key) {
+    if keyboard_check_released(pause_game_key) && !game.ended_by_defeat {
         game.pause()
     }
 }
