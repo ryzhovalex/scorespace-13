@@ -1,6 +1,6 @@
 event_inherited()
 spawn_rate_per_second = 0.25
-spawn_rate_dynamic = 0.01
+spawn_rate_dynamic = 0.03
 time_increase = room_speed * 10
 alarm[0] = time_increase	// every time spawn rate increase
 

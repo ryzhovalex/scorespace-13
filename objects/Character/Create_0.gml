@@ -4,7 +4,7 @@ move_speed = 3.3
 lifes = 1
 
 hit_cooldown = 1 * room_speed
-hit_force = 3.2
+hit_force = 2.3
 hit_distance = 40
 
 // Animation
