@@ -1,7 +1,7 @@
 pinned_character = noone
 
-_x_margin = 50
-_y_margin = 70
+_x_margin = 36
+_y_margin = 42
 _x = x +_x_margin
 _y = y - _y_margin
 _max_value = 100

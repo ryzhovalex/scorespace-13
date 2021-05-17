@@ -5,7 +5,7 @@ line_y1 = floor(y + sprite_width / 2)
 // line_x1 = floor(x + sprite_height / 2)
 
 function catch_ball(ball) {
-    instance_find(Score, 0).goal()
+    instance_find(Score, 0).goal(ball.prize_points)
     instance_destroy(ball)
 } 
 

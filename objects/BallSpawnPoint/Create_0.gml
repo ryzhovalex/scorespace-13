@@ -1,9 +1,12 @@
 spawn_radius = 180
-spawn_strength = 0 // how much force (in speed) will be added to spawned ball 
-spawn_delay = 0.1 * room_speed // how much time in seconds spawner prepare for the spawn
+spawn_strength = random(1) // how much force (in speed) will be added to spawned ball 
+spawn_delay = 2 * room_speed // how much time in seconds spawner prepare for the spawn
 _target_direction = 0 // real direction where ball will spent 
 _final_ball_speed = 0
 _final_ball_type = noone
+
+// Animation
+curve_pos = 0	// position on curve animation
 
 function spawn(ball) { 
     _final_ball_type = ball

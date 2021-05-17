@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sp_test_ball",
-    "path": "sprites/sp_test_ball/sp_test_ball.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

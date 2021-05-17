@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_test_gate",
-    "path": "sprites/sp_test_gate/sp_test_gate.yy",
+    "name": "sp_target",
+    "path": "sprites/sp_target/sp_target.yy",
   },
   "solid": false,
   "visible": true,

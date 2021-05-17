@@ -6,7 +6,7 @@ is_spawned_player = false
 
 function spawn_character() {
     if !is_spawned_player {
-        character = instance_create_depth(character_spawn_coord[0], character_spawn_coord[1], 0, Character)
+        //character = instance_create_depth(character_spawn_coord[0], character_spawn_coord[1], 0, Character)
         is_spawned_player = true
     }
 }
@@ -14,7 +14,6 @@ function spawn_character() {
 function defeat() {
     ended_by_defeat = true
     pause("tech")
-    instance_destroy(instance_find(Character, 0))
 }
 
 function pause(type) {
@@ -66,6 +65,7 @@ function change_screen_mode() {
 }
 
 function exit_game() {
-    game_end()
+	if is_paused
+		game_end()
 }
 
