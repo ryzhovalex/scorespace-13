@@ -1,6 +1,8 @@
 owner = noone
 live_time = noone	//_hit_animation_time from character in hit()
 hitted_balls = []
+image_alpha = 0.6
+image_speed = 3
 
 _pause_waited = false
 _alarm0_lock = false
@@ -10,6 +12,10 @@ function period() {
         _alarm0_lock = true
         alarm[0] = live_time    
     }
+	
+	// Animation
+	if image_index == 3
+		image_speed = 0
     
     var xx_owner = owner.lengthdir_x(owner.hit_distance, direction)
     var yy_owner = owner.lengthdir_y(owner.hit_distance, direction)

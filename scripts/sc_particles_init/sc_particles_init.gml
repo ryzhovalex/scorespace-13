@@ -15,19 +15,105 @@ global.part_system_target = part_system_create()
 part_system_depth(global.part_system_ball, 1)
 part_system_depth(global.part_system_target, -1)
 
-#region Trail
+#region Trail small
 // Для мяча, по которому ударили
 
-var _p = part_type_create()
+var _p0 = part_type_create()
 
 // Здаем характеристики для типа
-part_type_shape(_p, pt_shape_disk)
-part_type_life(_p, 12, 12)
-part_type_alpha2(_p, .15, 0)
-part_type_size(_p, .85, .85, -0.05, 0)
+part_type_shape(_p0, pt_shape_disk)
+part_type_life(_p0, 12, 12)
+part_type_alpha2(_p0, .15, 0)
+part_type_size(_p0, .65, .65, -0.05, 0)
+part_type_color2(_p0, c_orange, c_white)
 
 // Передаем новый тип
-global.part_trail = _p
+global.part_trail_small = _p0
+
+#endregion
+
+#region Trail medium
+// Для мяча, по которому ударили
+
+var _p5 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_shape(_p5, pt_shape_disk)
+part_type_life(_p5, 12, 12)
+part_type_alpha2(_p5, .15, 0)
+part_type_size(_p5, .85, .85, -0.05, 0)
+part_type_color2(_p5, c_orange, c_white)
+
+// Передаем новый тип
+global.part_trail_medium = _p5
+
+#endregion
+
+#region Trail big
+// Для мяча, по которому ударили
+
+var _p6 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_shape(_p6, pt_shape_disk)
+part_type_life(_p6, 12, 12)
+part_type_alpha2(_p6, .15, 0)
+part_type_size(_p6, 1.1, 1.1, -0.05, 0)
+part_type_color2(_p6, c_orange, c_white)
+
+// Передаем новый тип
+global.part_trail_big = _p6
+
+#endregion
+
+#region HitTrail small
+// Для мяча, по которому ударили
+
+var _p7 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_shape(_p7, pt_shape_disk)
+part_type_life(_p7, 12, 12)
+part_type_alpha2(_p7, .15, 0)
+part_type_size(_p7, .65, .65, -0.05, 0)
+part_type_color1(_p7, c_red)
+
+// Передаем новый тип
+global.part_hittrail_small = _p7
+
+#endregion
+
+#region HitTrail medium
+// Для мяча, по которому ударили
+
+var _p8 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_shape(_p8, pt_shape_disk)
+part_type_life(_p8, 12, 12)
+part_type_alpha2(_p8, .15, 0)
+part_type_size(_p8, .85, .85, -0.05, 0)
+part_type_color1(_p8, c_red)
+
+// Передаем новый тип
+global.part_hittrail_medium = _p8
+
+#endregion
+
+#region HitTrail big
+// Для мяча, по которому ударили
+
+var _p9 = part_type_create()
+
+// Здаем характеристики для типа
+part_type_shape(_p9, pt_shape_disk)
+part_type_life(_p9, 12, 12)
+part_type_alpha2(_p9, .15, 0)
+part_type_size(_p9, 1.1, 1.1, -0.05, 0)
+part_type_color1(_p9, c_red)
+
+// Передаем новый тип
+global.part_hittrail_big = _p9
 
 #endregion
 

@@ -7,7 +7,7 @@ hit_cooldown = 1 * room_speed
 hit_force = 3
 hit_distance = 40
 _hit_performed_recently = false 
-_hit_animation_time = 0.15 * room_speed
+_hit_animation_time = 0.1 * room_speed
 
 _vision_sector = 0 // =0: sector -90|90; =90: sector 0|180 ... etc.
 
@@ -78,7 +78,9 @@ function hit() {
         _enable_hit_draw_pie() 
 		
 		var _sounds = [sn_swing_0, sn_swing_1, sn_swing_2, sn_swing_3]
-		audio_play_sound(_sounds[irandom(array_length(_sounds)-1)], 1, false)
+		
+		if global.sfx == 1
+			audio_play_sound(_sounds[irandom(array_length(_sounds)-1)], 1, false)
     } 
 }
 
@@ -122,5 +124,6 @@ function remove_life() {
         game.defeat() 
     }
 	
-	audio_play_sound(sn_hurt, 1, false)
+	if global.sfx == 1
+		audio_play_sound(sn_hurt, 1, false)
 }

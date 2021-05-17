@@ -26,7 +26,6 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"eec3033c-c70e-48b8-b710-b06d55dfcad5","path":"sprites/sp_cannon/sp_cannon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"eec3033c-c70e-48b8-b710-b06d55dfcad5","path":"sprites/sp_cannon/sp_cannon.yy",},"LayerId":{"name":"fa9d85de-29bf-4723-a1dd-b5d7e53132b2","path":"sprites/sp_cannon/sp_cannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"eec3033c-c70e-48b8-b710-b06d55dfcad5","path":"sprites/sp_cannon/sp_cannon.yy",},"LayerId":{"name":"056eadf4-ac28-4010-a8bf-88215b729bc3","path":"sprites/sp_cannon/sp_cannon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sp_cannon","path":"sprites/sp_cannon/sp_cannon.yy",},"resourceVersion":"1.0","name":"eec3033c-c70e-48b8-b710-b06d55dfcad5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
