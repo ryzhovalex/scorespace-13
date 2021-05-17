@@ -1,7 +1,7 @@
 event_inherited()
 
-initial_speed = 1
-bounce_extra_speed = 2 // how much speed ball will gain after bouncing of a wall
+initial_speed = 5
+bounce_extra_speed = 0.2 // how much speed ball will gain after bouncing of a wall
 max_speed = 10 
 prize_points = 350
 

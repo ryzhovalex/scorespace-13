@@ -4,8 +4,14 @@ move_speed = 3
 lifes = 1
 
 hit_cooldown = 1 * room_speed
-hit_force = 3
+hit_force = 2.5
 hit_distance = 40
+
+// Animation
+anim_spd = 0.3
+global.move_x = 0
+global.move_y = 0
+
 _hit_performed_recently = false 
 _hit_animation_time = 0.1 * room_speed
 
@@ -18,27 +24,28 @@ function change_direction() {
     
     switch _vision_sector {
         case 0:
-            image_index = 0
+			//image_index = 0
             break
         case 90:
-            image_index = 1
+            //image_index = 1
             break
         case 180:
-            image_index = 2
-            break
+            //image_index = 2
+            break	
         case 270:
-            image_index = 3
+            //image_index = 3
             break
     }
 }
 
 function move(move_up_key, move_left_key, move_down_key, move_right_key) {
     // TODO: solve problem with diagonal speed which higher than direct speed
-    var move_x = keyboard_check(move_right_key) - keyboard_check(move_left_key)
-    var move_y = keyboard_check(move_down_key) - keyboard_check(move_up_key)
+	// Remove local for animation
+    global.move_x = keyboard_check(move_right_key) - keyboard_check(move_left_key)
+    global.move_y = keyboard_check(move_down_key) - keyboard_check(move_up_key)
     
-    var hsp = move_x * move_speed
-    var vsp = move_y * move_speed
+    var hsp = global.move_x * move_speed
+    var vsp = global.move_y * move_speed
     
     // collisions algo from here: https://www.youtube.com/watch?v=IysShLIaosk
     // TODO: refactor this shit below
