@@ -1,11 +1,11 @@
 # [ScoreSpace Jam #13 🕹️](https://itch.io/jam/scorejam13)<br/>Theme: DODGING!
 
-## Stickball
+### Stickball
 
 Stick and ball, that might be easier. Dodge balls and kick them at the target.
 
 
-## Credits
+### Credits
 
 **snkot** — game design and sounds<br/>
 **Rinochka Werkatz** — graphics<br/>
