@@ -4,6 +4,7 @@
 
 Stick and ball, that might be easier. Dodge balls and kick them at the target.
 
+![gameplay-gif](submit-page/stickball-gif-1.gif)
 
 ### Credits
 
